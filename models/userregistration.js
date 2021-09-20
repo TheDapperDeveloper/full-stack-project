@@ -10,6 +10,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      userRegistration.hasOne(models.itinerary, {
+        foreignKey: 'userID'
+      })
       // define association here
     }
   };
