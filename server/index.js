@@ -2,6 +2,7 @@ const Sequelize = require("sequelize");
 const {Users} = require("./models");
 const {Trips} = require("./models")
 const {Itineraries} = require ("./models")
+const cors = require("cors");
 
 const express = require("express");
 const cookie_parser = require('cookie-parser')
@@ -10,6 +11,7 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(cookie_parser('abcdef'))
+app.use(cors())
 
 app.post("/register", async (req, res) => {
     const { firstName, lastName, username, password } = req.body;
@@ -19,6 +21,7 @@ app.post("/register", async (req, res) => {
         username: username,
         password: password,
     });
+    console.log(newUser)
     res.send(`Inserted ${newUser.firstName} into table`)
 });
 
