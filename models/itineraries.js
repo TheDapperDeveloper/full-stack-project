@@ -3,27 +3,34 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Trips extends Model {
+  class Itineraries extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Trips.hasOne(models.Itineraries, {
-        foreignKey: 'tripID'
+      Itineraries.belongsTo(models.Users, {
+        foreignKey: 'userID',
+        onDelete:"CASCADE"
       });
+      Itineraries.belongsTo(models.Trips, {
+        foreignKey: 'tripID',
+        onDelete:'CASCADE'
+      })
+
       // define association here
     }
   };
-  Trips.init({
+  Itineraries.init({
+    userID: DataTypes.INTEGER,
+    tripID: DataTypes.INTEGER,
     arrDate: DataTypes.STRING,
     depDate: DataTypes.STRING,
-    region: DataTypes.STRING,
-    country: DataTypes.STRING
+    location: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Trips',
+    modelName: 'Itineraries',
   });
-  return Trips;
+  return Itineraries;
 };

@@ -2,32 +2,28 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-
-    await queryInterface.bulkInsert('trips', [{
-      arrDate: '2021-09-20',
-      depDate: '2021-09-30',
-      region:'South America',
-      country: "Brazil",
+    await queryInterface.bulkInsert('Trips', [{
+      arrDate: "12/23/2021",
+      depDate: "01/01/2022",
+      region: "Asia",
+      country: "Singapore",
       createdAt: new Date(),
-      updatedAt: new Date(),
-    }],
-    [{
-      arrDate: '2022-09-20',
-      depDate: '2023-09-30',
-      region:'Asia',
-      country: "China",
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }],
-    [{
-      arrDate: '2022-10-20',
-      depDate: '2023-11-30',
-      region:'Europe',
+      updatedAt: new Date()
+    }], {
+      arrDate: "01/15/2022",
+      depDate: "02/01/2022",
+      region: "Europe",
       country: "England",
       createdAt: new Date(),
-      updatedAt: new Date(),
-    }],
-    )
+      updatedAt: new Date()
+    }, {
+      arrDate: "06/26/2022",
+      depDate: "07/06/2022",
+      region: "Africa",
+      country: "Togo",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    });
     /**
      * Add seed commands here.
      *

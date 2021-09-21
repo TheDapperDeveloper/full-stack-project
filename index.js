@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
-const {userRegistration} = require("./models");
-const {trips} = require("./models")
+const {Users} = require("./models");
+const {Trips} = require("./models")
 const express = require("express");
 const app = express();
 const PORT = 3000;
@@ -8,18 +8,18 @@ const PORT = 3000;
 app.use(express.json());
 
 app.post("/register", async (req, res) => {
-    const { firstName, lastName, userName, password } = req.body;
-    const newUser = await userRegistration.create ({
+    const { firstName, lastName, username, password } = req.body;
+    const newUser = await Users.create ({
         firstName: firstName,
         lastName: lastName,
-        userName: userName,
+        username: username,
         password: password,
     });
     res.send(`Inserted ${newUser.firstName} into table`)
 })
 
 app.post("/view_trips", async(req, res) => {
-    const tripInfo = await trips.findAll();
+    const tripInfo = await Trips.findAll();
     res.send(tripInfo);
 });
 

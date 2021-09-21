@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('itineraries', {
+    await queryInterface.createTable('Itineraries', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -9,32 +9,35 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userID: {
+        allowNull: false,
         type: Sequelize.INTEGER,
-        allowNull:false,
         onDelete: 'CASCADE',
         references: {
-          model:'userregistration',
+          model: 'Users',
           key: 'id',
           as: 'userID'
         }
       },
-      tripID:{
-        type:Sequelize.STRING,
-        allowNull:false,
+      tripID: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
-          model:'trips',
+          model: 'Trips',
           key: 'id',
           as: 'tripID'
         }
       },
       arrDate: {
-        type: Sequelize.DATEONLY
+        allowNull: false,
+        type: Sequelize.STRING
       },
       depDate: {
-        type: Sequelize.DATEONLY
+        allowNull: false,
+        type: Sequelize.STRING
       },
       location: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {
@@ -48,6 +51,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('itineraries');
+    await queryInterface.dropTable('Itineraries');
   }
 };
