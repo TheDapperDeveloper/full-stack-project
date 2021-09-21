@@ -7,6 +7,7 @@ module.exports = {
       depDate: "02/01/2022",
       region: "Europe",
       country: "England",
+      location: "The Royal Palace",
       createdAt: new Date(),
       updatedAt: new Date()
     }]);

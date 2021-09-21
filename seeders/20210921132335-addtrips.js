@@ -7,6 +7,7 @@ module.exports = {
       depDate: "01/01/2022",
       region: "Asia",
       country: "Singapore",
+      location:"Marina Bay Sands Singapore",
       createdAt: new Date(),
       updatedAt: new Date()
     }], {

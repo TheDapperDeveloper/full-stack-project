@@ -5,8 +5,9 @@ module.exports = {
     await queryInterface.bulkInsert('Trips', [{
       arrDate: "06/26/2022",
       depDate: "07/06/2022",
-      region: "Africa",
-      country: "Togo",
+      region: "South America",
+      country: "Brazil",
+      location: "Christ the Redeemer",
       createdAt: new Date(),
       updatedAt: new Date()
     }]);

@@ -17,14 +17,14 @@ app.post("/register", async (req, res) => {
         password: password,
     });
     res.send(`Inserted ${newUser.firstName} into table`)
-})
+});
 
 app.post("/view_trips", async(req, res) => {
     const tripInfo = await Trips.findAll();
     res.send(tripInfo);
 });
 
-app.post("/view_itinerary/:id", async (req, res) => {
+app.post("/view_itinerary/:userID", async (req, res) => {
     const itinerary = await Itineraries.findAll();
     res.json(itinerary);
 });

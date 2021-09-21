@@ -5,9 +5,9 @@ module.exports = {
     await queryInterface.bulkInsert('Itineraries', [{
       userID: 2,
       tripID: 4,
-      arrDate: "01/15/2022",
-      depDate: "02/01/2022",
-      location: 'Royal Palace',
+      arrDate: "06/26/2022",
+      depDate: "07/06/2022",
+      location: 'Christ the Redeemer',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
