@@ -14,7 +14,7 @@ const createUser = async () => {
       password
     };
   
-    const createUser = await fetch(url, {
+    const createUser = await fetch (url, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -25,4 +25,4 @@ const createUser = async () => {
   };
   submitButton.addEventListener("click", () => {
     createUser();
-  });
+});
