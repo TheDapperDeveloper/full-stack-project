@@ -25,9 +25,15 @@ app.post("/register", async (req, res) => {
     res.send(`Inserted ${newUser.firstName} into table`)
 });
 
-// app.get("/login", async (req,res) => {
-
-// })
+app.post("/login", async (req,res) => {
+    const { username, password } =req.body;
+    const checkUser = await Users.findAll({
+        where: {
+            username: username,
+            password: password
+        }
+    });
+})
 
 app.post("/view_trips", async(req, res) => {
     const tripInfo = await Trips.findAll();
