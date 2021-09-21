@@ -25,23 +25,30 @@ app.post("/view_trips", async(req, res) => {
 });
 
 app.post("/view_itinerary/:userID", async (req, res) => {
-    const itinerary = await Itineraries.findAll();
+    const { userID } = req.params;
+    const itinerary = await Itineraries.findAll({
+        where: {
+            userID: userID
+        }
+    });
     res.json(itinerary);
 });
 
-app.post("/update_itinerary/:id", async(req, res) => {
-    const tripInfo = await Itineraries.update(req.body, {
+app.post("/update_trip/:tripID", async(req, res) => {
+    const { tripID } = req.params;
+    const itinerary = await Itineraries.update(req.body, {
         where: {
-            id:req.params.id
+            tripID:tripID
         }
     });
-    res.send(tripInfo);
+    res.send(itinerary);
 });
 
-app.post("/delete_trip/:id", async(req, res) => {
+app.post("/delete_trip/:tripID", async(req, res) => {
+    const { tripID } = req.params;
     const tripInfo = await Itineraries.destroy({
         where: {
-            id:req.params.id
+            tripID:tripID
         }
     });
     res.send("Deleted");
