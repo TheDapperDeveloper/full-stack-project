@@ -1,6 +1,7 @@
 const Sequelize = require("sequelize");
 const {Users} = require("./models");
 const {Trips} = require("./models")
+const {Itineraries} = require ("./models")
 const express = require("express");
 const app = express();
 const PORT = 3000;
@@ -23,8 +24,13 @@ app.post("/view_trips", async(req, res) => {
     res.send(tripInfo);
 });
 
-app.post("/update_trip/:id", async(req, res) => {
-    const tripInfo = await trips.update(req.body, {
+app.post("/view_itinerary/:id", async (req, res) => {
+    const itinerary = await Itineraries.findAll();
+    res.json(itinerary);
+});
+
+app.post("/update_itinerary/:id", async(req, res) => {
+    const tripInfo = await Itineraries.update(req.body, {
         where: {
             id:req.params.id
         }
@@ -33,7 +39,7 @@ app.post("/update_trip/:id", async(req, res) => {
 });
 
 app.post("/delete_trip/:id", async(req, res) => {
-    const tripInfo = await trips.destroy({
+    const tripInfo = await Itineraries.destroy({
         where: {
             id:req.params.id
         }
