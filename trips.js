@@ -12,6 +12,5 @@ async function getTrips() {
     getTripImg.style.width = "200px"
     createDiv.innerHTML = tripImg.url
 trips.append(tripImg, explanation)
-
-
 }
+getTrips();

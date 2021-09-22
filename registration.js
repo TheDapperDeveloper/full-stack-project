@@ -1,4 +1,4 @@
-const submitButton = document.querySelector(".submitbutton")
+const submitButton = document.querySelector(".submitbutton");
 
 const createUser = async () => {
     const url = "";
@@ -14,7 +14,7 @@ const createUser = async () => {
       password
     };
   
-    const createUser = await fetch (url, {
+    const makeUser = await fetch (url, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -26,3 +26,4 @@ const createUser = async () => {
   submitButton.addEventListener("click", () => {
     createUser();
 });
+
