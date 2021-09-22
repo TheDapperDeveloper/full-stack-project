@@ -14,8 +14,8 @@ module.exports = {
         onDelete: 'CASCADE',
         references: {
           model: 'Users',
-          key: 'id',
-          as: 'userID'
+          key:'id',
+          as:'userID'
         }
       },
       tripID: {
@@ -24,9 +24,13 @@ module.exports = {
         onDelete: 'CASCADE',
         references: {
           model: 'Trips',
-          key: 'id',
-          as: 'tripID'
+          key:'id',
+          as:'tripID'
         }
+      },
+      title: {
+        allowNull: false,
+        type: Sequelize.STRING
       },
       arrDate: {
         allowNull: false,
@@ -38,7 +42,12 @@ module.exports = {
       },
       location: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        references: {
+          model: 'Trips',
+          key:'location',
+          as:'location'
+        }
       },
       createdAt: {
         allowNull: false,

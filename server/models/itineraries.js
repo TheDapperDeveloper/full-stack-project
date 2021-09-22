@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const users = require('./users');
 module.exports = (sequelize, DataTypes) => {
   class Itineraries extends Model {
     /**
@@ -11,20 +12,24 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Itineraries.belongsTo(models.Users, {
-        foreignKey: 'userID',
-        onDelete:"CASCADE"
+        foreignKey:'userID',
+        onDelete:'CASCADE'
       });
       Itineraries.belongsTo(models.Trips, {
         foreignKey: 'tripID',
-        onDelete:'CASCADE'
+        onDelete: 'CASCADE'
       })
-
+      Itineraries.belongsTo(models.Trips, {
+        foreignKey: 'location',
+        onDelete: 'CASCADE'
+      })
       // define association here
     }
   };
   Itineraries.init({
     userID: DataTypes.INTEGER,
     tripID: DataTypes.INTEGER,
+    title: DataTypes.STRING,
     arrDate: DataTypes.STRING,
     depDate: DataTypes.STRING,
     location: DataTypes.STRING

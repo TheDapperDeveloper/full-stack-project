@@ -11,16 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Trips.hasOne(models.Itineraries, {
-        foreignKey: 'tripID'
-      });
+        foreignKey:'tripID'
+      })
       // define association here
     }
   };
   Trips.init({
-    arrDate: DataTypes.STRING,
-    depDate: DataTypes.STRING,
+    tripID: DataTypes.INTEGER,
     region: DataTypes.STRING,
-    country: DataTypes.STRING
+    state: DataTypes.STRING,
+    location: DataTypes.STRING,
+    photo: DataTypes.STRING,
+    description: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Trips',

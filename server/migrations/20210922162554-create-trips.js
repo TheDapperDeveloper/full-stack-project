@@ -8,25 +8,29 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      arrDate: {
+      tripID: {
         allowNull: false,
-        type: Sequelize.STRING
-      },
-      depDate: {
-        allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       region: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      country: {
+      state: {
         allowNull: false,
         type: Sequelize.STRING
       },
       location: {
-        allowNull:false,
-        type:Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      photo: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      description: {
+        allowNull: false,
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
