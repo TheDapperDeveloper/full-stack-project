@@ -1,10 +1,60 @@
+
 body {
+    display: flex;
     background-color: #0C4160;
     color: #C3CEDA;
-    
-}
-.registerform {
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    font-family: 'Fira Sans', sans-serif;
 }
+.divmain {
+    font-size: xx-large;
+    background-color: #0D659D;
+    border-radius: 100px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    font-size: xx-large;
+    padding: 10px;
+    margin-top: 100px;
+    background-color: #0D659D;
+}
+.submitbutton {
+	margin-top: 30px;
+    background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
+	background-color: transparent;
+	border-radius:16px;
+	border:2px solid #C3CEDA;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.submitbutton:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
+	background-color:#019ad2;
+}
+.submitbutton:active {
+	position:relative;
+	top:1px;
+}
+
+
 

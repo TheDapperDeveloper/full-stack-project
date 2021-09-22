@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="maindiv">
+        <h1 class="headermain">Login</h1>
+        <a href="home.html">
+        <button class="homebutton">Home</button>
+        </a>
+    </div>
     <form action="/login" method="POST" class="mainform">
         <div class="usernamefield">
             <label for="usernamefield">Username</label>
@@ -18,8 +27,8 @@
                 Password
                 <input type="password" name="password" required>
             </label>
-            <button class="submitbutton">Submit</button>
         </div>
+        <button class="submitbutton">Submit</button>
     </form>
 </body>
 <script src="login.js"></script>
