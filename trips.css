@@ -3,3 +3,12 @@ body {
     color: #C3CEDA;
     font-family: 'Fira Sans', sans-serif;
 }
+.headerdiv {
+    background-color: #0D659D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: xx-large;
+    
+}

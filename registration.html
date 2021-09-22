@@ -11,26 +11,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="divmain"><h1 class="mainheader">Register Your Account</h1></div>
+    <div class="divmain"><h1 class="mainheader">Register Your Account</h1>
+        <a href="home.html">
+        <button class="homebutton">Home</button>
+        </a>
+    </div>
     <form action="" class="registerform">
-        <div class="firstnamefield">
-            <label for="firstnamefield">First Name</label>
-            <input type="text" name="firstName" id="firstName" required>
+        <div class="bodydiv">
+            <div class="firstnamefield">
+                <label for="firstnamefield">First Name</label>
+                <input type="text" name="firstName" id="firstName" required>
+            </div>
+            <div class="lastnamefield">
+                <label for="lastnamefield">Last Name</label>
+                <input type="text" name="lastName" id="lastName" required>
+            </div>
+            <div class="usernamefield">
+                <label for="username">Username</label>
+                <input type="text" name="userName" id="userName" required>
+            </div>
+                <label>
+                    Password
+                    <input type="text" name="password" required>
+                </label>
+            <div class="passwordfield"></div>
+            <button type="submit" class="submitbutton">Submit</button>
         </div>
-        <div class="lastnamefield">
-            <label for="lastnamefield">Last Name</label>
-            <input type="text" name="lastName" id="lastName" required>
-        </div>
-        <div class="usernamefield">
-            <label for="username">Username</label>
-            <input type="text" name="userName" id="userName" required>
-        </div>
-            <label>
-                Password
-                <input type="text" name="password" required>
-            </label>
-        <div class="passwordfield"></div>
-        <button type="submit" class="submitbutton">submit</button>
     </form>
 </body>
 <script src="registration.js"></script>
