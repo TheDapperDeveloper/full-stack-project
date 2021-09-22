@@ -19,10 +19,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'tripID',
         onDelete: 'CASCADE'
       })
-      Itineraries.belongsTo(models.Trips, {
-        foreignKey: 'location',
-        onDelete: 'CASCADE'
-      })
       // define association here
     }
   };

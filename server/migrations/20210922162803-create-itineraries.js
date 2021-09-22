@@ -43,11 +43,6 @@ module.exports = {
       location: {
         allowNull: false,
         type: Sequelize.STRING,
-        references: {
-          model: 'Trips',
-          key:'location',
-          as:'location'
-        }
       },
       createdAt: {
         allowNull: false,
