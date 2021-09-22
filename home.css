@@ -1,8 +1,19 @@
+body {
+    background-color: #0C4160;
+    color: #C3CEDA;
+}
+
 .maindiv {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     justify-content: space-between;
+    
 
+}
+.secondDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
