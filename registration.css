@@ -15,10 +15,10 @@ body {
     font-size: xx-large;
     background-color: #0D659D;
     border-radius: 100px;
-    width: 800px;
-    display: flex;
     align-items: center;
     justify-content: center;
+	border-style: solid;
+	border-color: #738FA7;
 }
 
 .regform {
@@ -32,6 +32,8 @@ body {
     margin-top: 100px;
     background-color: #0D659D;
     border-radius: 20px;
+	border-style: solid;
+	border-color: #738FA7;
 }
 .submitbutton {
 	margin-top: 30px;

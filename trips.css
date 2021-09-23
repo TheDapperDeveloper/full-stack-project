@@ -11,6 +11,8 @@ body {
     border-radius: 20px;
     font-size: xx-large;
     flex-direction: column;
+	border-style: solid;
+	border-color: #738FA7;
     
 }
 .mainform {
@@ -24,6 +26,8 @@ body {
     border-radius: 10px;
 	height: 100px;
     justify-content: space-evenly;
+	border-style: solid;
+	border-color: #738FA7;
 }
 .submitbutton {
     background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
