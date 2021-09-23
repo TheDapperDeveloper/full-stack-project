@@ -89,10 +89,10 @@ app.post("/view_itinerary/:userID", async (req, res) => {
             userID: userID
         }
     });
-    res.json(itinerary);
+    res.send(itinerary);
 });
 
-app.post("/update_trip/:tripID", async(req, res) => {
+app.post("/update_itinerary/:tripID", async(req, res) => {
     const { tripID } = req.params;
     const itinerary = await Itineraries.update(req.body, {
         where: {

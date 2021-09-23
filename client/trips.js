@@ -7,6 +7,7 @@ const submitbutton = document.querySelector(".submitbutton")
 const tripsDiv = document.querySelector(".tripsdiv")
 const selectform = document.querySelector("option").value
 console.log(selectform)
+
 // const selectform = "East"
 
 const getTrips = async () => {
@@ -39,7 +40,7 @@ const getTripsEast = async () => {
 
       const button = document.createElement("button")
       button.innerHTML = "Add to Itinerary"
-
+      
       const trips = document.createElement("div")
 
       trips.append(displayTrip, displayPhoto, displayDes, button)
@@ -109,5 +110,6 @@ submitbutton.addEventListener("click", () => {
     console.log("button clicked")
     getTrips();
   });
+
 
  
