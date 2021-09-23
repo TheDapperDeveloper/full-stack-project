@@ -30,11 +30,12 @@ const getTrips = async () => {
       const displayDes = document.createElement("p")
       displayDes.innerHTML = tripDes
 
-      const button 
+      const button = document.createElement("button")
+      button.innerHTML = "Add to Itinerary"
 
       const trips = document.createElement("div")
 
-      trips.append(displayTrip, displayPhoto, displayDes)
+      trips.append(displayTrip, displayPhoto, displayDes, button)
       tripsDiv.append(trips)
   }
 };
