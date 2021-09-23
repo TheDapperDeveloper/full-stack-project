@@ -2,15 +2,6 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('Trips', [{
-      arrDate: "01/15/2022",
-      depDate: "02/01/2022",
-      region: "Europe",
-      country: "England",
-      location: "The Royal Palace",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }]);
     /**
      * Add seed commands here.
      *
@@ -23,6 +14,12 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('Trips', {
+      region: [
+        "East",
+        "West"
+      ]
+    });
     /**
      * Add commands to revert seed here.
      *

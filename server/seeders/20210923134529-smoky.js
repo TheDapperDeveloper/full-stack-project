@@ -3,28 +3,15 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Trips', [{
-      arrDate: "12/23/2021",
-      depDate: "01/01/2022",
-      region: "Asia",
-      country: "Singapore",
-      location:"Marina Bay Sands Singapore",
+      tripID: 10,
+      region: "East",
+      state: "Tennessee",
+      location:"Great Smoky Mountains National Park",
+      photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRis80XMdGWeULbL-PQulguomleI9LP9PTB2A&usqp=CAU",
+      description:"Many trails to choose from where forests can be explored and streams can be followed to waterfalls",
       createdAt: new Date(),
       updatedAt: new Date()
-    }], {
-      arrDate: "01/15/2022",
-      depDate: "02/01/2022",
-      region: "Europe",
-      country: "England",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }, {
-      arrDate: "06/26/2022",
-      depDate: "07/06/2022",
-      region: "Africa",
-      country: "Togo",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    });
+    }]);
     /**
      * Add seed commands here.
      *

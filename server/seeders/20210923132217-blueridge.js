@@ -2,12 +2,13 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('Itineraries', [{
-      userID: 2,
-      tripID: 4,
-      arrDate: "06/26/2022",
-      depDate: "07/06/2022",
-      location: 'Christ the Redeemer',
+    await queryInterface.bulkInsert('Trips', [{
+      tripID: 9,
+      region: "East",
+      state: "North Carolina",
+      location:"The Blue Ridge Mountains",
+      photo: "https://www.greatsmokies.com/wp-content/uploads/2018/06/BlueRidgeParkway.jpg",
+      description:"469 uninterrupted miles of spectacular views of mountains, waterfalls, and diverse vegetation.",
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
