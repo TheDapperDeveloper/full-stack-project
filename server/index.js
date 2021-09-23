@@ -42,15 +42,16 @@ app.post("/login", async (req,res) => {
             password: password
         }
     });
-    const userFound =checkUser.dataValues;
-    if (checkUser.dataValues) {
-        req.session.user = userFound;
-        res.redirect("/searchpage");
-    } else {
-        res
-            .status(401)
-            .send("Could not locate these credentials. Please register or try to log in again.");
-    }
+    res.send("Thank you for logging in.")
+    // const userFound =checkUser.dataValues;
+    // if (checkUser.dataValues) {
+    //     req.session.user = userFound;
+    //     res.redirect("http://127.0.0.1:5500/client/trips.html");
+    // } else {
+    //     res
+    //         .status(401)
+    //         .send("Could not locate these credentials. Please register or try to log in again.");
+    // }
 });
 
 //search page
