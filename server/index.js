@@ -98,4 +98,13 @@ app.post("/delete_trip/:tripID", async(req, res) => {
     res.send("Deleted");
 });
 
+app.post("/delete_trip/id", async(req, res) => {
+    const { id } = req.params;
+    const delTrips = await Trips.destory({
+        where: {
+            id:id
+        }
+    });
+})
+
 app.listen(PORT, console.log(`Listening on port ${PORT}`));
