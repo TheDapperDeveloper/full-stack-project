@@ -13,14 +13,6 @@ app.use(express.json());
 app.use(cookie_parser('abcdef'))
 app.use(cors())
 
-// app.use (
-//     session ({
-//         secret: "secret",
-//         resave: false,
-//         saveUninitialized:true,
-//         cookie: {secure: false, maxAge: 2592000},
-//     })
-// );
 
 app.post("/register", async (req, res) => {
     const { firstName, lastName, username, password } = req.body;
@@ -42,31 +34,26 @@ app.post("/login", async (req,res) => {
             password: password
         }
     });
-    const userFound =checkUser.dataValues;
-    if (checkUser.dataValues) {
-        req.session.user = userFound;
-        res.redirect("/searchpage");
-    } else {
-        res
-            .status(401)
-            .send("Could not locate these credentials. Please register or try to log in again.");
-    }
 });
 
-//search page
-
-app.get("/search_page", (req,res) => {
-    if(req.session.user){
-        res.render("/searchpage");
-    } else {
-        res.render("/login");
-    }
-});
-
-app.post("/view_trips", async(req, res) => {
-    const tripInfo = await Trips.findAll();
+app.post("/view_trips_east", async(req, res) => {
+    const tripInfo = await Trips.findAll({
+        where: {
+            region: 'East'
+        }
+    });
     res.send(tripInfo);
 });
+
+app.post("/view_trips_west", async(req, res) => {
+    const tripInfo = await Trips.findAll({
+        where: {
+            region: 'West'
+        }
+    });
+    res.send(tripInfo);
+});
+
 
 app.post("/view_itinerary/:userID", async (req, res) => {
     const { userID } = req.params;
@@ -75,10 +62,10 @@ app.post("/view_itinerary/:userID", async (req, res) => {
             userID: userID
         }
     });
-    res.json(itinerary);
+    res.send(itinerary);
 });
 
-app.post("/update_trip/:tripID", async(req, res) => {
+app.post("/update_itinerary/:tripID", async(req, res) => {
     const { tripID } = req.params;
     const itinerary = await Itineraries.update(req.body, {
         where: {
