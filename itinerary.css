@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #0C4160;
+    color: #C3CEDA;
+    
+}
+.topdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
