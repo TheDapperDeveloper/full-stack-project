@@ -1,0 +1,149 @@
+body {
+	background-color: #0C4160;
+    color: #C3CEDA;
+}
+
+.maindiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #0D659D;
+    font-family: 'Fira Sans', sans-serif;
+	border-color: whitesmoke;
+	font-size: 30px;
+
+}
+.secondDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: 'Fira Sans', sans-serif;
+	background-color: #0D659D;
+	color: #C3CEDA;
+	font-size: small;
+	border-radius: 10px;
+}
+
+.Itinerary {
+	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
+	background-color: transparent;
+	border-radius:16px;
+	border:2px solid #C3CEDA;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.Itinerary:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
+	background-color:#019ad2;
+}
+.Itinerary:active {
+	position:relative;
+	top:1px;
+}
+.Trips {
+	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
+	background-color: transparent;
+	border-radius:16px;
+	border:2px solid #C3CEDA;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+	margin-left: 50px;
+}
+.Trips:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
+	background-color:#019ad2;
+}
+.Trips:active {
+	position:relative;
+	top:1px;
+}
+.SignUp {
+	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
+	background-color: transparent;
+	border-radius:16px;
+	border:2px solid #C3CEDA;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.SignUp:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
+	background-color:#019ad2;
+}
+.SignUp:active {
+	position:relative;
+	top:1px;
+}
+.Login {
+	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
+	background-color: transparent;
+	border-radius:16px;
+	border:2px solid #C3CEDA;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+	margin-right: 50px;
+}
+.Login:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
+	background-color:#019ad2;
+}
+.Login:active {
+	position:relative;
+	top:1px;
+}
+.mainheader {
+	margin-left: 50px;
+}
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	justify-content: space-evenly;
+	margin-top: 225px;
+	background-color:#0D659D;
+}
+@media screen and (max-width: 870px) {
+	.maindiv {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.Trips {
+		margin-right: 50px
+	}
+	.Login {
+		margin-left: 50px;
+	}
+	.mainheader {
+		margin-right: 40px
+	}
+}
