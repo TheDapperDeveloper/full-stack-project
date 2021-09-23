@@ -1,5 +1,5 @@
 body {
-    background-color: #0C4160;
+	background-color: #0C4160;
     color: #C3CEDA;
 }
 
@@ -9,11 +9,10 @@ body {
     justify-content: center;
     flex-direction: row;
     justify-content: space-between;
-    font-size: xx-large;
     background-color: #0D659D;
-    border-radius: 100px;
     font-family: 'Fira Sans', sans-serif;
 	border-color: whitesmoke;
+	font-size: 30px;
 
 }
 .secondDiv {
@@ -24,6 +23,8 @@ body {
     font-family: 'Fira Sans', sans-serif;
 	background-color: #0D659D;
 	color: #C3CEDA;
+	font-size: small;
+	border-radius: 10px;
 }
 
 .Itinerary {
@@ -122,6 +123,14 @@ body {
 }
 .mainheader {
 	margin-left: 50px;
+}
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	justify-content: space-evenly;
+	margin-top: 225px;
+	background-color:#0D659D;
 }
 @media screen and (max-width: 870px) {
 	.maindiv {
