@@ -7,10 +7,9 @@ async function getTrips() {
     const getTrip = await trips.json();
     const tripImg = document.createElement("img")
     const explanation = document.createElement("p")
-    getTripImg.src = getTrip.url
-    getTripImg.style.height = "300px"
-    getTripImg.style.width = "300px"
-    createDiv.innerHTML = tripImg.url
+    tripImg.src = getTrip.url
+    tripImg.style.height = "300px"
+    tripImg.style.width = "300px"
     
 trips.append(tripImg, explanation)
 }

@@ -26,7 +26,6 @@ const createUser = async (e) => {
     console.log(userData)
   };
   form.addEventListener("submit", (e) => {
-    window.location.replace("login.html")
     createUser(e);
 });
 

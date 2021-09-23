@@ -3,7 +3,6 @@ body {
     display: flex;
     background-color: #0C4160;
     color: #C3CEDA;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -22,7 +21,7 @@ body {
     justify-content: center;
 }
 
-.registerform {
+.regform {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +37,7 @@ body {
 	margin-top: 30px;
     background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -46,10 +45,10 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
-    margin-left: 100px;
+    margin-left: 80px;
 }
 .submitbutton:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
@@ -63,7 +62,7 @@ body {
 	margin-bottom: 30px;
     background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -71,7 +70,7 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 }
@@ -83,6 +82,23 @@ body {
 	position:relative;
 	top:1px;
 }
-
+@media screen and (max-width: 815px) {
+	.divmain {
+		font-size: x-large;
+		width: 600px;
+	}
+	.submitbutton {
+		padding: 6px 24px;
+		border-radius: 16px;
+		
+	}
+	.homebutton {
+		padding: 6px 24px;
+		border-radius: 16px;
+	}
+	.regform {
+		font-size: large;
+	}
+}
 
 

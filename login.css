@@ -13,23 +13,25 @@ body {
 	align-items: center;
 	justify-content: center;
 	justify-content: space-evenly;
+	flex-direction: column;
 	background-color: #0D659D;
 	border-radius: 20px;
-	height: 175px;
-	width: 400px;
+	width: 600px;
+	height: 200px
 }
-.mainform {
+.loginForm {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 	margin-top: 150px;
-	font-size: large;
+	font-size: x-large;
 	background-color: #0D659D;
 	border-radius: 20px;
 	height: 150px;
+	width: 600px;
 }
-.submitbutton {
+.loginbutton {
 	margin-top: 20px;
     background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
@@ -45,16 +47,16 @@ body {
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 }
-.submitbutton:hover {
+.loginbutton:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
 	background-color:#019ad2;
 }
-.submitbutton:active {
+.loginbutton:active {
 	position:relative;
 	top:1px;
 }
 .homebutton {
-	margin-top: 30px;
+	margin-bottom: 30px;
     background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
 	border-radius:16px;
@@ -76,4 +78,14 @@ body {
 .homebutton:active {
 	position:relative;
 	top:1px;
+}
+@media screen and (max-width:700px) {
+	.maindiv {
+		width: 400px;
+		font-size: x-large;
+	}
+	.loginForm {
+		width: 400px;
+		font-size: large;
+	}
 }
