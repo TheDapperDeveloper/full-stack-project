@@ -63,10 +63,24 @@ app.get("/search_page", (req,res) => {
     }
 });
 
-app.post("/view_trips", async(req, res) => {
-    const tripInfo = await Trips.findAll();
+app.post("/view_trips_east", async(req, res) => {
+    const tripInfo = await Trips.findAll({
+        where: {
+            region: 'East'
+        }
+    });
     res.send(tripInfo);
 });
+
+app.post("/view_trips_west", async(req, res) => {
+    const tripInfo = await Trips.findAll({
+        where: {
+            region: 'West'
+        }
+    });
+    res.send(tripInfo);
+});
+
 
 app.post("/view_itinerary/:userID", async (req, res) => {
     const { userID } = req.params;
