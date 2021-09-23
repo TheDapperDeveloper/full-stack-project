@@ -25,5 +25,6 @@ const createUser = async () => {
   };
   submitButton.addEventListener("click", () => {
     createUser();
+    window.location.replace("login.html")
 });
 

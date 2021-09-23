@@ -20,5 +20,6 @@ const userLogin = async () => {
     });
 };
 submitButton.addEventListener("click", () => {
-    userLogin()
+    window.location.replace("trips.html")
+    userLogin();
 });
