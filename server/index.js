@@ -35,15 +35,6 @@ app.post("/login", async (req,res) => {
         }
     });
 });
-//search page
-
-app.get("/search_page", (req,res) => {
-    if(req.session.user){
-        res.render("/searchpage");
-    } else {
-        res.render("/login");
-    }
-});
 
 app.post("/view_trips_east", async(req, res) => {
     const tripInfo = await Trips.findAll({
