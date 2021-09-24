@@ -1,6 +1,10 @@
 body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	background-color: #0C4160;
     color: #C3CEDA;
+
 }
 
 .maindiv {
@@ -8,29 +12,33 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #0D659D;
     font-family: 'Fira Sans', sans-serif;
 	border-color: whitesmoke;
 	font-size: 30px;
+	border-style: solid;
+	border-color: #738FA7;
 
 }
 .secondDiv {
-    display: flex;
+	display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
+	justify-content: center;
     font-family: 'Fira Sans', sans-serif;
 	background-color: #0D659D;
 	color: #C3CEDA;
-	font-size: small;
+	font-size: medium;
 	border-radius: 10px;
+	border-style: solid;
+	border-color: #738FA7;
 }
 
 .Itinerary {
 	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -38,7 +46,7 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 }
@@ -53,7 +61,7 @@ body {
 .Trips {
 	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -61,7 +69,7 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 	margin-left: 50px;
@@ -77,7 +85,7 @@ body {
 .SignUp {
 	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -85,7 +93,7 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 }
@@ -100,7 +108,7 @@ body {
 .Login {
 	background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -108,7 +116,7 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 	margin-right: 50px;
@@ -131,19 +139,80 @@ body {
 	justify-content: space-evenly;
 	margin-top: 225px;
 	background-color:#0D659D;
+	border-style: solid;
+	border-color: #738FA7;
 }
-@media screen and (max-width: 870px) {
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly
+}
+.githublogo {
+	margin-bottom: 30px ;
+	border-radius: 50px;
+}
+.mediumlogo {
+	border-radius: 20px;
+}
+.imageOne {
+	border-radius: 20px;
+	margin-right: 50px;
+}
+.imageTwo {
+	border-radius: 20px;
+}
+.logoimg {
+	background: transparent;
+}
+.headerandlogo {
+	display: flex;
+}
+@media screen and (max-width: 1000px) {
 	.maindiv {
 		flex-direction: column;
 		justify-content: space-between;
 	}
 	.Trips {
-		margin-right: 50px
+		margin-right: 50px;
+		padding: 6px 24px;
+		border-radius: 16px;
 	}
 	.Login {
 		margin-left: 50px;
+		padding: 6px 24px;
+		border-radius: 16px;
+	}
+	.SignUp {
+		padding: 6px 24px;
+		border-radius: 16px;
+		
+	}
+	.Itinerary {
+		padding: 6px 24px;
+		border-radius: 16px;
 	}
 	.mainheader {
 		margin-right: 40px
+	}
+	.footer {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.links {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	.githublogo {
+		margin-right: 50px;
+	}
+	.imageOne {
+		margin-left: 80px;
+	}
+	.imageTwo {
+		margin-left: 80px;
+	}
+	.secondDiv {
+		font-size: small;
 	}
 }
