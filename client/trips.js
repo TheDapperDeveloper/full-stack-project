@@ -33,15 +33,18 @@ const getTripsEast = async () => {
       const tripPhoto = trip.photo;
       const displayPhoto = document.createElement("img")
       displayPhoto.src = tripPhoto
+      displayPhoto.className = "tripPhotos"
 
       const tripDes = trip.description
       const displayDes = document.createElement("p")
       displayDes.innerHTML = tripDes
 
       const button = document.createElement("button")
+      button.className = "itineraryButton"
       button.innerHTML = "Add to Itinerary"
       
       const trips = document.createElement("div")
+      trips.className="tripsDiv"
 
       trips.append(displayTrip, displayPhoto, displayDes, button)
       tripsDiv.append(trips)

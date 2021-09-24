@@ -13,27 +13,33 @@ body {
 	align-items: center;
 	justify-content: center;
 	justify-content: space-evenly;
+	flex-direction: column;
 	background-color: #0D659D;
 	border-radius: 20px;
-	height: 175px;
-	width: 400px;
+	width: 600px;
+	height: 200px;
+	border-style: solid;
+	border-color: #738FA7;
 }
-.mainform {
+.loginForm {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 	margin-top: 150px;
-	font-size: large;
+	font-size: x-large;
 	background-color: #0D659D;
 	border-radius: 20px;
 	height: 150px;
+	width: 600px;
+	border-style: solid;
+	border-color: #738FA7;
 }
-.submitbutton {
+.loginbutton {
 	margin-top: 20px;
     background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -41,23 +47,23 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 }
-.submitbutton:hover {
+.loginbutton:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #C3CEDA 100%);
 	background-color:#019ad2;
 }
-.submitbutton:active {
+.loginbutton:active {
 	position:relative;
 	top:1px;
 }
 .homebutton {
-	margin-top: 30px;
+	margin-bottom: 50px;
     background:linear-gradient(to bottom, #C3CEDA 5%, #019ad2 100%);
 	background-color: transparent;
-	border-radius:16px;
+	border-radius:30px;
 	border:2px solid #C3CEDA;
 	display:inline-block;
 	cursor:pointer;
@@ -65,7 +71,7 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:10px 32px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #5b6178;
 }
@@ -77,3 +83,33 @@ body {
 	position:relative;
 	top:1px;
 }
+@media screen and (max-width:800px) {
+	.maindiv {
+		width: 400px;
+		font-size: x-large;
+	}
+	.loginForm {
+		width: 400px;
+		font-size: large;
+	}
+	.homebutton {
+		padding: 6px 24px;
+		border-radius: 16px;
+	}
+	.loginbutton {
+		padding:6px 24px;
+		border-radius: 16px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
